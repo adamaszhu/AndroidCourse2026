@@ -2,6 +2,9 @@ package com.adamaszhu.androidcourse;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,5 +25,26 @@ public class DemoActivity extends AppCompatActivity {
             return insets;
         });
         Log.i("DemoActivity", "Screen is created");
+
+        Button btnVisibility = findViewById(R.id.btn_visibility);
+        btnVisibility.setText("Change Visibility");
+        btnVisibility.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TextView tvResult = findViewById(R.id.tv_result);
+                // Flip visibility of the result text view
+                if (tvResult.getVisibility() == View.VISIBLE) {
+                    tvResult.setVisibility(View.INVISIBLE);
+                } else {
+                    tvResult.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+        test();
     }
+
+    /**
+     * Test JavaDoc
+     */
+    void test() {}
 }
