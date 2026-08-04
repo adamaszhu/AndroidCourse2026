@@ -1,0 +1,73 @@
+# ==============================
+# Android / Android Studio
+# ==============================
+
+# Gradle
+.gradle/
+build/
+**/build/
+
+# Local configuration file
+local.properties
+
+# Android Studio / IntelliJ IDEA
+.idea/
+*.iml
+
+# Android Studio captures
+captures/
+
+# External native build
+.externalNativeBuild/
+.cxx/
+
+# ==============================
+# Generated Android files
+# ==============================
+
+# APK / AAB
+*.apk
+*.aab
+
+# Android profiling
+*.hprof
+
+# Navigation editor temporary files
+.navigation/
+
+# ==============================
+# Signing / Secrets
+# ==============================
+
+# Signing keys
+*.jks
+*.keystore
+
+# Signing configuration / secrets
+keystore.properties
+secrets.properties
+
+# ==============================
+# Java
+# ==============================
+
+*.class
+
+# ==============================
+# OS files
+# ==============================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# ==============================
+# Logs / Temporary files
+# ==============================
+
+*.log
+*.tmp
+*.temp
