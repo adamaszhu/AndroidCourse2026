@@ -1,16 +1,26 @@
 <resources>
     <string name="app_name">AndroidCourse</string>
-    <string name="default_text">-</string>
-    <string name="change_visibility">Change Visibility</string>
-    <string name="demo_ui_components">UI Components</string>
+
     <string name="activity_first">First Activity</string>
     <string name="activity_second">Second Activity</string>
-    <string name="feature_navigation_data">Open Feature Two</string>
-    <string name="feature_open_web">Open Web</string>
-    <string name="feature_share_text">Share Text</string>
-    <string name="back">Back</string>
+
     <string name="feature_main">Android Course</string>
     <string name="feature_ui_components">UI Components</string>
     <string name="feature_navigation">Navigation</string>
     <string name="feature_location">Location</string>
+    <string name="feature_fragment">Fragments</string>
+    <string name="feature_layout">Layouts</string>
+    <string name="feature_linear_layout">Linear</string>
+    <string name="feature_constraint_layout">Constraint</string>
+
+    <string name="fragment_first">First Fragment</string>
+    <string name="fragment_second">Second Fragment</string>
+
+    <string name="default_text">-</string>
+
+    <string name="change_visibility">Change Visibility</string>
+    <string name="back">Back</string>
+    <string name="open_feature_two">Open Feature Two</string>
+    <string name="open_web">Open Web</string>
+    <string name="share_text">Share Text</string>
 </resources>

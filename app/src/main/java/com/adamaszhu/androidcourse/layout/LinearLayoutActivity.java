@@ -9,20 +9,22 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.adamaszhu.androidcourse.R;
+import com.adamaszhu.androidcourse.databinding.ActivityLinearLayoutBinding;
+import com.adamaszhu.androidcourse.utility.BaseActivity;
 
-public class LinearLayoutActivity extends AppCompatActivity {
+public class LinearLayoutActivity extends BaseActivity {
+
+    private ActivityLinearLayoutBinding binding;
 
     // TODO: Programmatically add a text view
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_linear_layout);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+    public void load() {
+        binding = ActivityLinearLayoutBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+    }
+
+    @Override
+    public void setup() {
     }
 }

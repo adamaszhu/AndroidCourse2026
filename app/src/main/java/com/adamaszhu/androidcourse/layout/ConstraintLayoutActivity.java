@@ -9,18 +9,20 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.adamaszhu.androidcourse.R;
+import com.adamaszhu.androidcourse.databinding.ActivityConstraintLayoutBinding;
+import com.adamaszhu.androidcourse.utility.BaseActivity;
 
-public class ConstraintLayoutActivity extends AppCompatActivity {
+public class ConstraintLayoutActivity extends BaseActivity {
+
+    private ActivityConstraintLayoutBinding binding;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_constraint_layout);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+    public void load() {
+        binding = ActivityConstraintLayoutBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+    }
+
+    @Override
+    public void setup() {
     }
 }

@@ -12,19 +12,19 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/tv_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView1\n\n\n\nExplain Code\n\n\n\n\n\n\n\n\n\n\n" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/tv_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView2" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/tv_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView3" />
@@ -34,21 +34,21 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/tv_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="TextView4" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/tv_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="TextView5" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/tv_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

@@ -8,7 +8,7 @@
     tools:context=".layout.ConstraintLayoutActivity">
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/tv_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView1"
@@ -17,13 +17,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="TextView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintWidth_percent="0.5"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_1" />
 
     <androidx.constraintlayout.widget.Guideline
         android:orientation="vertical"
@@ -40,11 +40,11 @@
         android:id="@+id/guideline_right" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tv_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView3 Long Content"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintStart_toEndOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/textView2" />
+        app:layout_constraintTop_toBottomOf="@id/tv_2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

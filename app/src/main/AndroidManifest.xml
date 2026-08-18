@@ -26,7 +26,7 @@
         <activity
             android:name=".features.FeaturesActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize" >
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,11 +38,15 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".components.FirstActivity"
+            android:name=".navigation.FirstActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".components.SecondActivity"
+            android:name=".navigation.SecondActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".fragment.FragmentActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

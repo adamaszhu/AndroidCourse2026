@@ -13,8 +13,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.adamaszhu.androidcourse.R;
 import com.adamaszhu.androidcourse.databinding.ActivityDemoBinding;
+import com.adamaszhu.androidcourse.utility.BaseActivity;
 
-public class DemoActivity extends AppCompatActivity {
+public class DemoActivity extends BaseActivity {
 
     public final static String INTENT_KEY = "DEMO";
 
@@ -23,29 +24,14 @@ public class DemoActivity extends AppCompatActivity {
     private ActivityDemoBinding binding;
     private Demo demo;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-
-        demo = getIntent().getSerializableExtra(INTENT_KEY, Demo.class);
-
-        load();
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-
-        setupDemo();
-    }
-
-    private void load() {
+    public void load() {
         binding = ActivityDemoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        demo = getIntent().getSerializableExtra(INTENT_KEY, Demo.class);
     }
 
-    private void setupDemo() {
+    public void setup() {
         setTitle(demo.getTitleId());
         demo.setListener(new OutputListener() {
             @Override
@@ -62,7 +48,7 @@ public class DemoActivity extends AppCompatActivity {
             Button button = new Button(this);
             button.setText(demoButton.getTitleId());
             button.setOnClickListener(demoButton.getListener());
-            binding.main.addView(button);
+            binding.content.addView(button);
         }
     }
 }

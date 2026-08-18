@@ -1,20 +1,10 @@
 package com.adamaszhu.androidcourse.features;
 
 import android.content.Intent;
-import android.os.Build;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-import com.adamaszhu.androidcourse.BaseActivity;
-import com.adamaszhu.androidcourse.R;
+import com.adamaszhu.androidcourse.utility.BaseActivity;
 import com.adamaszhu.androidcourse.databinding.ActivityFeaturesBinding;
 import com.adamaszhu.androidcourse.demo.DemoActivity;
 
@@ -23,6 +13,7 @@ public class FeaturesActivity extends BaseActivity {
     private static final String INTENT_KEY = "FEATURE";
 
     private ActivityFeaturesBinding binding;
+
     private Feature feature;
 
     public void load() {

@@ -1,8 +1,10 @@
-package com.adamaszhu.androidcourse.demo;
+package com.adamaszhu.androidcourse.location;
 
 import android.view.View;
 
 import com.adamaszhu.androidcourse.R;
+import com.adamaszhu.androidcourse.demo.Demo;
+import com.adamaszhu.androidcourse.demo.DemoButton;
 
 public class LocationDemo extends Demo {
     @Override

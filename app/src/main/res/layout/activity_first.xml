@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".components.FirstActivity">
+    tools:context=".navigation.FirstActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -16,19 +16,19 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_navigation_data"
-        android:text="@string/feature_navigation_data" />
+        android:id="@+id/btn_open_feature_two"
+        android:text="@string/open_feature_two" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_open_web"
-        android:text="@string/feature_open_web" />
+        android:text="@string/open_web" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_share_content"
-        android:text="@string/feature_share_text" />
+        android:id="@+id/btn_share_text"
+        android:text="@string/share_text" />
 
 </LinearLayout>

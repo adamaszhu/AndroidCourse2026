@@ -1,16 +1,9 @@
-package com.adamaszhu.androidcourse.components;
+package com.adamaszhu.androidcourse.navigation;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-import com.adamaszhu.androidcourse.BaseActivity;
+import com.adamaszhu.androidcourse.utility.BaseActivity;
 import com.adamaszhu.androidcourse.R;
 import com.adamaszhu.androidcourse.databinding.ActivitySecondBinding;
 
@@ -24,10 +17,10 @@ public class SecondActivity extends BaseActivity {
     public void load() {
         binding = ActivitySecondBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        setTitle(R.string.activity_second);
     }
 
     public void setup() {
+        setTitle(R.string.activity_second);
         Intent intent = getIntent();
         String message = intent.getStringExtra(MESSAGE_KEY);
         binding.tvResult.setText(message);
