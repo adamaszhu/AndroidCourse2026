@@ -31,7 +31,7 @@ public class ComponentsActivity extends AppCompatActivity {
         });
         Log.i(TAG, "Screen is created");
 
-        setupVisibilityButton();
+        setup();
     }
 
     private void load() {
@@ -39,7 +39,7 @@ public class ComponentsActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
     }
 
-    private void setupVisibilityButton() {
+    private void setup() {
         binding.btnVisibility.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

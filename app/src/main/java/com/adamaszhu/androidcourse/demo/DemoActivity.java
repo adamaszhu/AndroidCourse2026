@@ -16,6 +16,8 @@ import com.adamaszhu.androidcourse.databinding.ActivityDemoBinding;
 
 public class DemoActivity extends AppCompatActivity {
 
+    public final static String INTENT_KEY = "DEMO";
+
     private static final String TAG = DemoActivity.class.getName();
 
     private ActivityDemoBinding binding;
@@ -26,30 +28,7 @@ public class DemoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
 
-        // Temporary hardcode
-        demo = new Demo() {
-            @Override
-            public int getTitleId() {
-                return R.string.demo_ui_components;
-            }
-
-            @Override
-            public DemoButton[] getDemoButtons() {
-                return new DemoButton[] {
-                        new DemoButton(R.string.change_visibility, new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                getListener().updateOutput("Become Visible");
-                            }
-                        })
-                };
-            }
-
-            @Override
-            public void initialize() {
-                getListener().updateOutput("-");
-            }
-        };
+        demo = getIntent().getSerializableExtra(INTENT_KEY, Demo.class);
 
         load();
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

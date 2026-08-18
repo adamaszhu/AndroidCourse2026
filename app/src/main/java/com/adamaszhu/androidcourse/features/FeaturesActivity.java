@@ -1,39 +1,64 @@
 package com.adamaszhu.androidcourse.features;
 
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.adamaszhu.androidcourse.BaseActivity;
 import com.adamaszhu.androidcourse.R;
 import com.adamaszhu.androidcourse.databinding.ActivityFeaturesBinding;
+import com.adamaszhu.androidcourse.demo.DemoActivity;
 
-public class FeaturesActivity extends AppCompatActivity {
+public class FeaturesActivity extends BaseActivity {
+
+    private static final String INTENT_KEY = "FEATURE";
 
     private ActivityFeaturesBinding binding;
+    private Feature feature;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        load();
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-        setupSubviews();
-    }
-
-    private void load() {
+    public void load() {
         binding = ActivityFeaturesBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        Intent intent = getIntent();
+        feature = intent.getSerializableExtra(INTENT_KEY, Feature.class);
+        if (feature == null) {
+            feature = MainFeatures.MAIN;
+        }
     }
 
-    private void setupSubviews() {
+    public void setup() {
+        setTitle(feature.getTitleId());
+        setupButtons();
+    }
 
+    private void setupButtons() {
+        for (Feature subFeature : feature.getSubFeatures()) {
+            Button button = new Button(this);
+            button.setText(subFeature.getTitleId());
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Class destination = subFeature.getActivityClass();
+                    Intent intent = new Intent(FeaturesActivity.this, destination);
+                    if (destination == DemoActivity.class) {
+                        intent.putExtra(DemoActivity.INTENT_KEY, subFeature.getDemo());
+                    } else if (destination == FeaturesActivity.class) {
+                        intent.putExtra(FeaturesActivity.INTENT_KEY, subFeature);
+                    }
+                    startActivity(intent);
+                }
+            });
+            binding.content.addView(button);
+        }
     }
 }
