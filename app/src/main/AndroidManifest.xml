@@ -18,6 +18,7 @@
         <activity
             android:name=".layout.LinearLayoutActivity"
             android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".layout.ConstraintLayoutActivity"
@@ -47,6 +48,14 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".fragment.FragmentActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".layout.ListActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".layout.RecycleActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

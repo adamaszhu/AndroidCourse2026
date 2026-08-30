@@ -23,4 +23,8 @@
     <string name="open_feature_two">Open Feature Two</string>
     <string name="open_web">Open Web</string>
     <string name="share_text">Share Text</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="feature_list">List</string>
+    <string name="feature_recycle">Recycle</string>
 </resources>

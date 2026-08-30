@@ -17,8 +17,41 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/default_text"
+            android:autoLink="email"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alert"
+            android:id="@+id/btn_alert" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Custom Alert"
+            android:id="@+id/btn_custom_alert" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_book" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher_foreground" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bubble" />
 
         <Button
             android:id="@+id/btn_visibility"
@@ -64,6 +97,35 @@
             android:layout_height="wrap_content"
             android:text="ToggleButton" />
 
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekbar" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_link_text"
+            android:text="Link Text"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_text"
+            android:inputType="numberPassword"/>
+
+        <DatePicker
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/date_picker" />
+        <NumberPicker
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/number_picker"
+            />
+        <TimePicker
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/time_picker" />
     </LinearLayout>
 </ScrollView>
