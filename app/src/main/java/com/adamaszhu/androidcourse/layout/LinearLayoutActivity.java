@@ -12,6 +12,8 @@ import com.adamaszhu.androidcourse.R;
 
 public class LinearLayoutActivity extends AppCompatActivity {
 
+    // TODO: Programmatically add a text view
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
