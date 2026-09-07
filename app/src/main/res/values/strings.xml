@@ -13,8 +13,8 @@
     <string name="feature_linear_layout">Linear</string>
     <string name="feature_constraint_layout">Constraint</string>
 
-    <string name="fragment_first">First Fragment</string>
-    <string name="fragment_second">Second Fragment</string>
+    <string name="fragment_list">List</string>
+    <string name="fragment_map">Map</string>
 
     <string name="default_text">-</string>
 
@@ -27,4 +27,8 @@
     <string name="cancel">Cancel</string>
     <string name="feature_list">List</string>
     <string name="feature_recycle">Recycle</string>
+    <string name="feature_thread">Thread</string>
+    <string name="feature_thread_simple_runnable">Simple Runnable</string>
+    <string name="feature_thread_loop_runnable_crash">Loop Runnable - Crash</string>
+    <string name="feature_thread_loop_runnable">Loop Runnable</string>
 </resources>

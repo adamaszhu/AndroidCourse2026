@@ -17,15 +17,19 @@
             style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/fragment_first"
-            android:id="@+id/btn_fragment_first" />
+            android:text="@string/fragment_list"
+            android:id="@+id/btn_list" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/fragment_second"
-            android:id="@+id/btn_fragment_second" />
+            android:text="@string/fragment_map"
+            android:id="@+id/btn_map" />
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_container" />
 </LinearLayout>
