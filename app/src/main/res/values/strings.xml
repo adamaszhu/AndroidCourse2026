@@ -31,4 +31,14 @@
     <string name="feature_thread_simple_runnable">Simple Runnable</string>
     <string name="feature_thread_loop_runnable_crash">Loop Runnable - Crash</string>
     <string name="feature_thread_loop_runnable">Loop Runnable</string>
+    <string name="feature_thread_handler">Handler Thread</string>
+    <string name="feature_thread_download_event">Download Event</string>
+    <string name="feature_thread_event_bus">Event Bus</string>
+    <string name="feature_thread_custom_thread">Custom Thread</string>
+    <string name="feature_thread_stop_custom_thread">Stop Custom Thread</string>
+    <string name="feature_thread_future_task">Future Task</string>
+    <string name="feature_thread_pool">Thread Pool</string>
+    <string name="feature_service">Service</string>
+    <string name="feature_service_start">Start Service</string>
+    <string name="feature_service_stop">Stop Service</string>
 </resources>

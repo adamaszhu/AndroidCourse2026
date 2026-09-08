@@ -29,6 +29,17 @@ public class DemoActivity extends BaseActivity {
         setContentView(binding.getRoot());
 
         demo = getIntent().getSerializableExtra(INTENT_KEY, Demo.class);
+        demo.setActivity(this);
+    }
+
+    @Override
+    public void show() {
+        demo.show();
+    }
+
+    @Override
+    public void hide() {
+        demo.hide();
     }
 
     public void setup() {

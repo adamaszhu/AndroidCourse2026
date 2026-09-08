@@ -25,7 +25,22 @@ public abstract class BaseActivity extends AppCompatActivity {
         setup();
     }
 
+    @Override
+    protected void onStop() {
+        hide();
+        super.onStop();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        show();
+    }
+
     public abstract void load();
 
     public abstract void setup();
+
+    public void show() {}
+    public void hide() {}
 }

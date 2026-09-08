@@ -35,6 +35,7 @@ android {
 }
 
 dependencies {
+    implementation("org.greenrobot:eventbus:3.3.1")
     implementation(libs.activity.ktx)
     implementation(libs.appcompat)
     implementation(libs.constraintlayout)

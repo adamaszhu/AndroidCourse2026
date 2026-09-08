@@ -8,12 +8,13 @@ import com.adamaszhu.androidcourse.demo.Demo;
 import com.adamaszhu.androidcourse.demo.DemoActivity;
 import com.adamaszhu.androidcourse.location.LocationDemo;
 import com.adamaszhu.androidcourse.layout.LayoutFeatures;
+import com.adamaszhu.androidcourse.service.ServiceDemo;
 import com.adamaszhu.androidcourse.thread.ThreadDemo;
 
 import java.util.Arrays;
 
 public enum MainFeatures implements Feature {
-    MAIN, LAYOUT, NAVIGATION, UI_COMPONENTS, LOCATION, FRAGMENT, THREAD;
+    MAIN, LAYOUT, NAVIGATION, UI_COMPONENTS, LOCATION, FRAGMENT, THREAD, SERVICE;
 
     @Override
     public int getTitleId() {
@@ -32,6 +33,8 @@ public enum MainFeatures implements Feature {
                 return R.string.feature_fragment;
             case THREAD:
                 return R.string.feature_thread;
+            case SERVICE:
+                return R.string.feature_service;
             default:
                 throw new RuntimeException();
         }
@@ -49,6 +52,7 @@ public enum MainFeatures implements Feature {
                 return ComponentsActivity.class;
             case LOCATION:
             case THREAD:
+            case SERVICE:
                 return DemoActivity.class;
             case FRAGMENT:
                 return FragmentActivity.class;
@@ -77,6 +81,8 @@ public enum MainFeatures implements Feature {
                 return new LocationDemo();
             case THREAD:
                 return new ThreadDemo();
+            case SERVICE:
+                return new ServiceDemo();
             default:
                 return null;
         }
