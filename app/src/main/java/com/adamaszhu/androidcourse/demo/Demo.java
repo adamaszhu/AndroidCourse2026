@@ -2,18 +2,20 @@ package com.adamaszhu.androidcourse.demo;
 
 import android.app.Activity;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.io.Serializable;
 
 public abstract class Demo implements Serializable {
     private OutputListener listener;
 
-    protected Activity activity;
+    protected AppCompatActivity activity;
 
     public void setListener(OutputListener listener) {
         this.listener = listener;
     }
 
-    public void setActivity(Activity activity) { this.activity = activity; }
+    public void setActivity(AppCompatActivity activity) { this.activity = activity; }
 
     public OutputListener getListener() {
         return listener;

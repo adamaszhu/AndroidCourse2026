@@ -41,4 +41,14 @@
     <string name="feature_service">Service</string>
     <string name="feature_service_start">Start Service</string>
     <string name="feature_service_stop">Stop Service</string>
+    <string name="feature_service_bind">Bind Service</string>
+    <string name="feature_service_unbind">Unbind Service</string>
+    <string name="feature_service_hold">Hold Service</string>
+    <string name="feature_service_broadcast">Receive Broadcast</string>
+    <string name="feature_service_notification">Notification</string>
+    <string name="feature_sensor">Sensor</string>
+    <string name="feature_sensor_observe_acc">Observe Accelerator</string>
+    <string name="feature_sensor_ignore_acc">Ignore Accelerator</string>
+    <string name="feature_sensor_observe_pressure">Observe Pressure</string>
+    <string name="feature_sensor_ignore_pressure">Ignore Pressure</string>
 </resources>
