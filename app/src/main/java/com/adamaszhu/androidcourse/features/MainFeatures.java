@@ -6,16 +6,17 @@ import com.adamaszhu.androidcourse.navigation.FirstActivity;
 import com.adamaszhu.androidcourse.fragment.FragmentActivity;
 import com.adamaszhu.androidcourse.demo.Demo;
 import com.adamaszhu.androidcourse.demo.DemoActivity;
-import com.adamaszhu.androidcourse.location.LocationDemo;
 import com.adamaszhu.androidcourse.layout.LayoutFeatures;
+import com.adamaszhu.androidcourse.network.NetworkDemo;
 import com.adamaszhu.androidcourse.sensor.SensorDemo;
 import com.adamaszhu.androidcourse.service.ServiceDemo;
+import com.adamaszhu.androidcourse.storage.StorageDemo;
 import com.adamaszhu.androidcourse.thread.ThreadDemo;
 
 import java.util.Arrays;
 
 public enum MainFeatures implements Feature {
-    MAIN, LAYOUT, NAVIGATION, UI_COMPONENTS, LOCATION, FRAGMENT, THREAD, SERVICE, SENSOR;
+    MAIN, LAYOUT, NAVIGATION, UI_COMPONENTS, FRAGMENT, THREAD, SERVICE, SENSOR, STORAGE, NETWORK;
 
     @Override
     public int getTitleId() {
@@ -28,8 +29,6 @@ public enum MainFeatures implements Feature {
                 return R.string.feature_navigation;
             case UI_COMPONENTS:
                 return R.string.feature_ui_components;
-            case LOCATION:
-                return R.string.feature_location;
             case FRAGMENT:
                 return R.string.feature_fragment;
             case THREAD:
@@ -38,6 +37,10 @@ public enum MainFeatures implements Feature {
                 return R.string.feature_service;
             case SENSOR:
                 return R.string.feature_sensor;
+            case STORAGE:
+                return R.string.feature_storage;
+            case NETWORK:
+                return R.string.feature_network;
             default:
                 throw new RuntimeException();
         }
@@ -53,10 +56,11 @@ public enum MainFeatures implements Feature {
                 return FirstActivity.class;
             case UI_COMPONENTS:
                 return ComponentsActivity.class;
-            case LOCATION:
             case THREAD:
             case SERVICE:
             case SENSOR:
+            case STORAGE:
+            case NETWORK:
                 return DemoActivity.class;
             case FRAGMENT:
                 return FragmentActivity.class;
@@ -81,14 +85,16 @@ public enum MainFeatures implements Feature {
     @Override
     public Demo getDemo() {
         switch (this) {
-            case LOCATION:
-                return new LocationDemo();
             case THREAD:
                 return new ThreadDemo();
             case SERVICE:
                 return new ServiceDemo();
             case SENSOR:
                 return new SensorDemo();
+            case NETWORK:
+                return new NetworkDemo();
+            case STORAGE:
+                return new StorageDemo();
             default:
                 return null;
         }

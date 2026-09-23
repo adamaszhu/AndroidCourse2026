@@ -7,7 +7,6 @@
     <string name="feature_main">Android Course</string>
     <string name="feature_ui_components">UI Components</string>
     <string name="feature_navigation">Navigation</string>
-    <string name="feature_location">Location</string>
     <string name="feature_fragment">Fragments</string>
     <string name="feature_layout">Layouts</string>
     <string name="feature_linear_layout">Linear</string>
@@ -51,4 +50,25 @@
     <string name="feature_sensor_ignore_acc">Ignore Accelerator</string>
     <string name="feature_sensor_observe_pressure">Observe Pressure</string>
     <string name="feature_sensor_ignore_pressure">Ignore Pressure</string>
+    <string name="feature_storage">Storage</string>
+    <string name="feature_network">Network</string>
+    <string name="feature_storage_pref_load">Load Pref</string>
+    <string name="feature_storage_pref_write">Write Pref</string>
+    <string name="feature_storage_sql_load">Load SQL</string>
+    <string name="feature_storage_sql_insert">Insert Record</string>
+    <string name="feature_storage_sql_update">Update Record</string>
+    <string name="feature_storage_sql_delete">Delete Record</string>
+    <string name="feature_storage_file_load">Load File</string>
+    <string name="feature_storage_file_write">Write File</string>
+    <string name="feature_storage_cache_load">Load Cache</string>
+    <string name="feature_storage_cache_write">Write Cache</string>
+    <string name="feature_network_write_db">Write RTDB</string>
+    <string name="feature_network_read_DB">Read RTDB</string>
+    <string name="feature_network_api">Get objects</string>
+    <string name="feature_network_api_single">Get single object</string>
+    <string name="feature_sensor_bluetooth">Bluetooth</string>
+    <string name="feature_storage_content_add">Add content</string>
+    <string name="feature_storage_content_load">Load content</string>
+    <string name="feature_network_rtdb_write_array">Write RTDB array</string>
+    <string name="feature_network_rtdb_read_array">Read RTDB array</string>
 </resources>

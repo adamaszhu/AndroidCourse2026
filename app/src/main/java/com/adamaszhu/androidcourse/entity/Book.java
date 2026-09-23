@@ -17,6 +17,10 @@ public class Book {
         id = UUID.randomUUID().toString();
     }
 
+    public Book() {
+        id = UUID.randomUUID().toString();
+    }
+
     public String getAuthor() {
         return author;
     }

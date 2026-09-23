@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "991311685610",
+    "firebase_url": "https://androidcourse2026-11b45-default-rtdb.firebaseio.com",
+    "project_id": "androidcourse2026-11b45",
+    "storage_bucket": "androidcourse2026-11b45.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991311685610:android:c6bc0cca37d9e6539a7493",
+        "android_client_info": {
+          "package_name": "com.adamaszhu.androidcourse"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVGGfIUQvhspI5KrRGD5Suh0ahmJSxsMM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

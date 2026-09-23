@@ -1,10 +1,16 @@
 package com.adamaszhu.androidcourse.sensor;
 
+import android.Manifest;
+import android.bluetooth.BluetoothAdapter;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.view.View;
+
+import androidx.core.app.ActivityCompat;
 
 import com.adamaszhu.androidcourse.R;
 import com.adamaszhu.androidcourse.demo.Demo;
@@ -47,7 +53,8 @@ public class SensorDemo extends Demo {
                 observeAcc(),
                 ignoreAcc(),
                 observePressure(),
-                ignorePressure()
+                ignorePressure(),
+                bluetooth()
         };
     }
 
@@ -85,6 +92,31 @@ public class SensorDemo extends Demo {
             @Override
             public void onClick(View view) {
                 sensorManager.unregisterListener(listener);
+            }
+        });
+    }
+
+    private DemoButton bluetooth() {
+        return new DemoButton(R.string.feature_sensor_bluetooth, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
+                if (adapter == null) {
+                    return;
+                }
+                if (ActivityCompat.checkSelfPermission(activity, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+                    String[] permissions = {
+                            Manifest.permission.BLUETOOTH_SCAN,
+                            Manifest.permission.BLUETOOTH_CONNECT
+                    };
+
+                    ActivityCompat.requestPermissions(activity, permissions, 1);
+                    return;
+                }
+                if (!adapter.isEnabled()) {
+                    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                    activity.startActivityForResult(enableBtIntent, 1);
+                }
             }
         });
     }
