@@ -1,10 +1,8 @@
-package com.adamaszhu.androidcourse;
+package com.adamaszhu.androidcourse.components;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,13 +10,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.adamaszhu.androidcourse.databinding.ActivityDemoBinding;
+import com.adamaszhu.androidcourse.R;
+import com.adamaszhu.androidcourse.databinding.ActivityComponentsBinding;
 
-public class DemoActivity extends AppCompatActivity {
+public class ComponentsActivity extends AppCompatActivity {
 
-    private static final String TAG = DemoActivity.class.getName();
+    private static final String TAG = ComponentsActivity.class.getName();
 
-    private ActivityDemoBinding binding;
+    private ActivityComponentsBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,15 +31,15 @@ public class DemoActivity extends AppCompatActivity {
         });
         Log.i(TAG, "Screen is created");
 
-        setupViews();
+        setupVisibilityButton();
     }
 
     private void load() {
-        binding = ActivityDemoBinding.inflate(getLayoutInflater());
+        binding = ActivityComponentsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
     }
 
-    private void setupViews() {
+    private void setupVisibilityButton() {
         binding.btnVisibility.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

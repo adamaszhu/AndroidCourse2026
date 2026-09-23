@@ -12,20 +12,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidCourse">
         <activity
-            android:name=".DemoActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".layout.LinearLayoutActivity"
+            android:name=".demo.DemoActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize" >
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter></activity>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".layout.LinearLayoutActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".layout.ConstraintLayoutActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".features.FeaturesActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".components.ComponentsActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>
