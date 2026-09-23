@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidCourse</string>
+    <string name="default_text">-</string>
+    <string name="change_visibility">Change Visibility</string>
 </resources>

@@ -12,39 +12,45 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.adamaszhu.androidcourse.databinding.ActivityDemoBinding;
+
 public class DemoActivity extends AppCompatActivity {
+
+    private static final String TAG = DemoActivity.class.getName();
+
+    private ActivityDemoBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_demo);
+        load();
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        Log.i("DemoActivity", "Screen is created");
+        Log.i(TAG, "Screen is created");
 
-        Button btnVisibility = findViewById(R.id.btn_visibility);
-        btnVisibility.setText("Change Visibility");
-        btnVisibility.setOnClickListener(new View.OnClickListener() {
+        setupViews();
+    }
+
+    private void load() {
+        binding = ActivityDemoBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+    }
+
+    private void setupViews() {
+        binding.btnVisibility.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TextView tvResult = findViewById(R.id.tv_result);
-                // Flip visibility of the result text view
-                if (tvResult.getVisibility() == View.VISIBLE) {
-                    tvResult.setVisibility(View.INVISIBLE);
+                //  Flip visibility of the result text view
+                if (binding.tvResult.getVisibility() == View.VISIBLE) {
+                    binding.tvResult.setVisibility(View.INVISIBLE);
                 } else {
-                    tvResult.setVisibility(View.VISIBLE);
+                    binding.tvResult.setVisibility(View.VISIBLE);
                 }
             }
         });
-        test();
     }
-
-    /**
-     * Test JavaDoc
-     */
-    void test() {}
 }
